@@ -122,8 +122,8 @@ This command filters out certain directories and prints a tree view up to 3 leve
 tree -L 3 -I "__pycache__|myenv|__init__.py"
 ```
 ## Usage of the API
-For instructions on how to use the API, please refer to the API_DOCUMENTATION file.
-
+For instructions on how to use the API, please refer to the API_DOCUMENTATION.md file.
+[API Documentation](airbnb_clone/API_DOCUMENTATION.md)
 
 ## Future Plans
 - **Database Integration:** Integration with a SQL or NoSQL database to enhance data storage capabilities.
