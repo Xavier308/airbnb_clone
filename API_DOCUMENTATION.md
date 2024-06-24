@@ -5,12 +5,12 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Contributing](#contributing)
-- [What’s in Part 1?](#key-activities)
-- [Project structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
-- [Dependencies & Environment Setup]
+- [User Endpoints](#user-endpoints)
+- [Place Endpoints](#place-endpoints)
+- [Country and City Enpoints](#country-and-city-endpoints)
+- [Reviews Endpoints](#review-endpoints)
+- [Amenity Endpoints](#amenity-endpoints)
+
 
 ## User Endpoints
 
