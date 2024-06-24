@@ -246,6 +246,7 @@ Code: 200 OK
   },
   // More places...
 ]
+```
 
 ### Sample Call:
 ```bash
