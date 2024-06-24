@@ -64,7 +64,7 @@ This project utilizes a layered (n-tier) architecture to separate responsibiliti
 
 ### Directory Structure Overview:
 ```bash
-.
+Airbnb-Clone
 ├── app
 │   ├── api
 │   │   ├── amenity_api.py
@@ -103,25 +103,27 @@ This project utilizes a layered (n-tier) architecture to separate responsibiliti
 ├── run.py
 └── tests
 ```
-### How to print this diagram in terminal
+### How to Print the Directory Tree in the Terminal
 
-Install tree dependency:
+Install the tree Dependency:
+To use the tree command, first ensure that it is installed on your system by running:
 ```bash
 pip install tree
 ```
-### Print the tree:
-This command filter some directories and print the tree
+### Print the Tree:
+This command filters out certain directories and prints a tree view up to 3 levels deep:
 ```bash
 tree -L 3 -I "__pycache__|myenv|__init__.py"
 ```
 ## Usage of the API
-Visit API_DOCUMENTATION file to see how to consume the API
+For instructions on how to use the API, please refer to the API_DOCUMENTATION file.
 
 
 ## Future Plans
-- Integration with a SQL or NoSQL database.
-- Expansion of the API to include more complex functionalities.
-- Enhancement of security features and implementation of OAuth for better security.
+- **Database Integration:** Integration with a SQL or NoSQL database to enhance data storage capabilities.
+- **API Expansion:** Expansion of the API to include more complex functionalities, accommodating a wider range of user interactions.
+- **Security Enhancements:** Enhancement of security features, including the implementation of OAuth, to ensure robust security.
+- **Front-End Development:** Development of a front-end using HTML, CSS, and JavaScript to provide a user-friendly interface that connects seamlessly with the app.
 
 ## Resources
 
