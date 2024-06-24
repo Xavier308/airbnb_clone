@@ -2,6 +2,23 @@
 
 This Flask application serves as a simple clone of Airbnb, providing a RESTful API for managing users, places, amenities, reviews, cities, and countries. It is built using Python and Flask, utilizing blueprints to organize routes and JSON files for data storage. The application offers a scalable architecture and is planned for future integration with a backend database.
 
+## Author of this project:
+### **Xavier J. Cruz Santiago**
+
+Feel free to contact me for any questions or feedback regarding this project.
+
+## Table of Contents
+
+- [Features](#features)
+- [Local Setup](#local-setup)
+- [Project Architecture](#project-architecture)
+- [Usage of the API](#usage-of-the-api)
+- [Future Plans](#future-plans)
+- [Resources](#resources)
+
+- [UML Diagram Overview](#uml-diagram-overview)
+
+
 ## Features
 
 - **User Management**: Create, update, delete, and retrieve user profiles.
@@ -11,11 +28,6 @@ This Flask application serves as a simple clone of Airbnb, providing a RESTful A
 - **City Management**: Manage city details, allowing for the addition, update, and deletion of city information.
 - **Country Retrieval**: Retrieve details of countries, supporting broader geographic functionalities.
 
-
-## Author of this project
-### **Xavier J. Cruz Santiago**
-
-Feel free to contact me for any questions or feedback regarding this project.
 
 ## Local Setup
 
@@ -47,8 +59,10 @@ pip install -r requirements.txt
 python run.py
 ```
 
-## Structure of the APP - N tier Layer
+## Project Architecture
+This project utilizes a layered (n-tier) architecture to separate responsibilities, which simplifies management, maintenance, and scalability.
 
+### Directory Structure Overview:
 ```bash
 .
 ├── app
@@ -89,9 +103,9 @@ python run.py
 ├── run.py
 └── tests
 ```
-## How to print this diagram in terminal
+### How to print this diagram in terminal
 
-### Install tree dependency:
+Install tree dependency:
 ```bash
 pip install tree
 ```
@@ -101,16 +115,24 @@ This command filter some directories and print the tree
 tree -L 3 -I "__pycache__|myenv|__init__.py"
 ```
 ## Usage of the API
-Here is how you can interact with the application:
-
-### Create a user:
-Send a POST request to /users with the user data in JSON format.
-
-### Get a place:
-Send a GET request to /places/<place_id> to retrieve details about a place.
+Visit API_DOCUMENTATION file to see how to consume the API
 
 
 ## Future Plans
 - Integration with a SQL or NoSQL database.
 - Expansion of the API to include more complex functionalities.
 - Enhancement of security features and implementation of OAuth for better security.
+
+## Resources
+
+- [Concept Page: OOP - Introduction to UML](https://intranet.hbtn.io/concepts/1166)
+- [UML Class Diagram Tutorial](https://www.lucidchart.com/pages/uml-class-diagram)
+- [Python Documentation](https://docs.python.org/3/)
+- [Unit Testing in Python](https://docs.pytest.org/en/8.2.x/)
+- [PyTest testing tool](https://docs.python.org/3/library/unittest.html)
+- [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html)
+- [Docker Official Documentation](https://docs.docker.com/)
+- [Gunicorn Configuration](https://docs.gunicorn.org/en/stable/configure.html)
+- [Alpine Linux Documentation](https://wiki.alpinelinux.org/wiki/Main_Page)
+- [Docker Volumes](https://docs.docker.com/storage/)
+- [Dockerfile Best Practices](https://docs.docker.com/build/building/best-practices/)
