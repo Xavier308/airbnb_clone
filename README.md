@@ -17,8 +17,6 @@ Feel free to contact me for any questions or feedback regarding this project.
 - [Future Plans](#future-plans)
 - [Resources](#resources)
 
-- [UML Diagram Overview](#uml-diagram-overview)
-
 
 ## Features
 
@@ -63,6 +61,7 @@ python run.py
 The project began with designing a Unified Modeling Language (UML) diagram to plan and visualize the system's structure before coding.
 
 ![UML Diagram](assets/umldiagram.png)
+
 [UML Diagram - Lucid tool](https://lucid.app/lucidchart/e0cd139e-e4e6-4c89-bd0b-d89784df1658/edit?viewport_loc=-2703%2C-1089%2C4631%2C2037%2C0_0&invitationId=inv_cb4e75ab-f7ac-4577-9e9d-7f15f4b32b38)
 
 ## Project Architecture
@@ -123,7 +122,7 @@ tree -L 3 -I "__pycache__|myenv|__init__.py"
 ```
 ## Usage of the API
 For instructions on how to use the API, please refer to the API_DOCUMENTATION.md file.
-[API Documentation](airbnb_clone/API_DOCUMENTATION.md)
+[API Documentation](/API_DOCUMENTATION.md)
 
 ## Future Plans
 - **Database Integration:** Integration with a SQL or NoSQL database to enhance data storage capabilities.
