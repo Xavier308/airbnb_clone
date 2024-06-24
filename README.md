@@ -11,6 +11,7 @@ Feel free to contact me for any questions or feedback regarding this project.
 
 - [Features](#features)
 - [Local Setup](#local-setup)
+- [UML Diagram Overview](#uml-diagram-overview)
 - [Project Architecture](#project-architecture)
 - [Usage of the API](#usage-of-the-api)
 - [Future Plans](#future-plans)
@@ -58,6 +59,11 @@ pip install -r requirements.txt
 ```bash
 python run.py
 ```
+## UML Diagram Overview
+The project began with designing a Unified Modeling Language (UML) diagram to plan and visualize the system's structure before coding.
+
+![UML Diagram](assets/umldiagram.png)
+[UML Diagram - Lucid tool](https://lucid.app/lucidchart/e0cd139e-e4e6-4c89-bd0b-d89784df1658/edit?viewport_loc=-2703%2C-1089%2C4631%2C2037%2C0_0&invitationId=inv_cb4e75ab-f7ac-4577-9e9d-7f15f4b32b38)
 
 ## Project Architecture
 This project utilizes a layered (n-tier) architecture to separate responsibilities, which simplifies management, maintenance, and scalability.
