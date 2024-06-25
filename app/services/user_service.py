@@ -89,4 +89,3 @@ class UserService:
             raise ValueError("User not found")
         save_data('users', users)
         return True
-
