@@ -1,11 +1,12 @@
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify
 import json
 from instance.config import DevelopmentConfig
 from app.services.country_city_service import CountryCityService
+from app.extensions import db
 
 # Initialize SQLAlchemy
-db = SQLAlchemy()
+#db = SQLAlchemy()
 
 
 # Essential to render special characters (1)
@@ -20,7 +21,8 @@ def create_app(config_class=DevelopmentConfig):
     app.config['JSON_AS_ASCII'] = False  # Prevent Flask from escaping non-ASCII chars
 
     # Initialize SQLAlchemy
-    db = SQLAlchemy(app)  # Make sure 'db' is used throughout your application for SQLAlchemy operations
+    db.init_app(app)
+    # db = SQLAlchemy(app)  # Make sure 'db' is used throughout your application for SQLAlchemy operations
 
     # Set up the application context before initializing anything that requires the app context
     with app.app_context():
