@@ -7,22 +7,24 @@ from app.services.country_city_service import CountryCityService
 # Initialize SQLAlchemy
 db = SQLAlchemy()
 
+
 # Essential to render special characters (1)
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         return super().default(obj)  # Call the base class method for other types
 
-def create_app():
+def create_app(config_class=DevelopmentConfig):
     app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
+    app.config.from_object(config_class)
     app.json_encoder = CustomJSONEncoder  # Set the custom encoder
-    # Essential to render special characters (2)
     app.config['JSON_AS_ASCII'] = False  # Prevent Flask from escaping non-ASCII chars
 
-    # Set up the application context before initializing countries
+    # Initialize SQLAlchemy
+    db = SQLAlchemy(app)  # Make sure 'db' is used throughout your application for SQLAlchemy operations
+
+    # Set up the application context before initializing anything that requires the app context
     with app.app_context():
-        db.init_app(app) # Added 6/26/2024
-        # Initialize country data
+        from app.services.country_city_service import CountryCityService
         CountryCityService.initialize_countries()
 
     # Importing Blueprints
@@ -39,6 +41,7 @@ def create_app():
     app.register_blueprint(review_blueprint, url_prefix='')
     app.register_blueprint(amenity_blueprint, url_prefix='')
 
+    # This is for the render in localhost
     @app.route('/')
     def home():
         return "Welcome to the Flask API. Use the specific API endpoints to interact."
@@ -53,6 +56,8 @@ def create_app():
 
     return app
 
+# This is for activated it from command line
+# It is not necessary in production - Comment it**
 if __name__ == '__main__':
     app = create_app()
     app.run(debug=app.config['DEBUG'])
