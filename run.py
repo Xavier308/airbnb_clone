@@ -1,8 +1,11 @@
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, jsonify
 import json
 from instance.config import DevelopmentConfig
 from app.services.country_city_service import CountryCityService
 
+# Initialize SQLAlchemy
+db = SQLAlchemy()
 
 # Essential to render special characters (1)
 class CustomJSONEncoder(json.JSONEncoder):
@@ -18,6 +21,7 @@ def create_app():
 
     # Set up the application context before initializing countries
     with app.app_context():
+        db.init_app(app) # Added 6/26/2024
         # Initialize country data
         CountryCityService.initialize_countries()
 
